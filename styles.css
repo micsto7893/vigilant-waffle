@@ -125,7 +125,7 @@ section a[href^="mailto"]:hover {
 }
 
 /* Center section headings */
-section h2,
-section h3 {
+section h2 
+{
   text-align: center;
 }
