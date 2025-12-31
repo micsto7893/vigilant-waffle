@@ -62,3 +62,22 @@ footer {
   background-color: #2c3e50;
   color: #ffffff;
 }
+
+/* Mobile nav cleanup */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
