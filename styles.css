@@ -123,3 +123,9 @@ section a[href^="mailto"] {
 section a[href^="mailto"]:hover {
   background-color: #16a085;
 }
+
+/* Center section headings */
+section h2,
+section h3 {
+  text-align: center;
+}
