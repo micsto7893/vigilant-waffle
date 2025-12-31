@@ -130,3 +130,12 @@ section h2
 {
   text-align: center;
 }
+
+/* ---------- Back to Top Links ---------- */
+a[href="#top"] {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
