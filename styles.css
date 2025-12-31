@@ -96,7 +96,9 @@ header img {
 }
 
 section img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;   /* desktop cap */
+  height: auto;
   display: block;
   margin: 10px auto;
 }
