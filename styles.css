@@ -66,18 +66,19 @@ footer {
 /* Mobile nav cleanup */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
   }
 
   nav ul li {
-    margin: 8px 0;
+    margin: 0;
   }
 
   nav ul li a {
-    text-align: center;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
   }
 }
 
