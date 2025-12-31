@@ -233,3 +233,11 @@ a[href="#top"] {
   background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
 }
+
+.shenanigans-intro {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 16px;
+}
+
