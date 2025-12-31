@@ -148,3 +148,36 @@ a[href="#top"] {
   background-color: #fafafa;
 }
 
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Status colors */
+.status.complete {
+  background-color: #1abc9c;
+  color: #000;
+}
+
+.status.ongoing {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.status.abandoned {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.lesson {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-style: italic;
+}
+
