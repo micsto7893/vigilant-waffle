@@ -55,9 +55,8 @@ section {
 }
 
 /* ---------- Summon Section ---------- */
-#contact p {
+.summon {
   text-align: center;
-  margin: 0;
 }
 
 
