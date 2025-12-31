@@ -183,3 +183,15 @@ a[href="#top"] {
   font-style: italic;
 }
 
+.identity {
+  margin-top: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+.purpose {
+  margin-top: 16px;
+  font-style: italic;
+  color: #555;
+}
+
