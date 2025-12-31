@@ -55,9 +55,11 @@ section {
 }
 
 /* ---------- Summon Section ---------- */
-.summon {
+#contact p {
   text-align: center;
+  margin: 0;
 }
+
 
 /* ---------- Footer ---------- */
 footer {
