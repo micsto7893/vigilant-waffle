@@ -32,14 +32,15 @@
     <nav>
       <ul>
         <li><a href="#about">What is The Vigilant Waffle</a></li>
-        <li><a href="#projects">Shenanigans</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#shenanigans">Shenanigans</a></li>
         <li><a href="#contact">Summon the Waffle</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- About -->
+
     <section id="about">
       <h2>What is The Vigilant Waffle</h2>
 
@@ -68,64 +69,72 @@
       <a href="#top">⬆ Back to top</a>
     </section>
 
-    <!-- Shenanigans -->
     <section id="projects">
+      <h2>Projects</h2>
+
+      <p class="shenanigans-intro">
+        Two sample projects are listed below with a short description and an image placeholder.
+      </p>
+
+      <table class="projects-table">
+        <caption>Sample Projects & Status</caption>
+
+        <colgroup>
+          <col class="col-1">
+          <col>
+          <col class="col-3">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Description</th>
+            <th scope="col">Preview</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <strong>Image Integration Experiment</strong><br>
+              <span class="status complete">Complete</span>
+            </td>
+            <td>
+              Added a site image on GitHub Pages and learned why file paths, naming, formats, and caching can make “simple” things exciting.
+            </td>
+            <td>
+              <div class="img-placeholder" aria-label="Image placeholder for Image Integration Experiment"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>The Great 404 Battle</strong><br>
+              <span class="status complete">Complete</span>
+            </td>
+            <td>
+              Deployed the first version of the site and fought configuration dragons until GitHub Pages finally stopped serving a 404.
+            </td>
+            <td>
+              <div class="img-placeholder" aria-label="Image placeholder for The Great 404 Battle"></div>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3">
+              More projects coming soon — the waffle remains vigilant.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <a href="#top">⬆ Back to top</a>
+    </section>
+
+    <section id="shenanigans">
       <h2>Shenanigans</h2>
-
-      <!-- ===== Projects Table (Class Requirement) ===== -->
-<table class="projects-table">
-  <caption>Sample Projects & Status</caption>
-
-  <colgroup>
-    <col class="col-1">
-    <col>
-    <col class="col-3">
-  </colgroup>
-
-  <thead>
-    <tr>
-      <th scope="col">Project</th>
-      <th scope="col">Description</th>
-      <th scope="col">Preview</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        <strong>Image Integration Experiment</strong><br>
-        <span class="status complete">Complete</span>
-      </td>
-      <td>
-        Added a site image on GitHub Pages and learned why file paths, naming, formats, and caching can make “simple” things exciting.
-      </td>
-      <td>
-        <div class="img-placeholder" aria-label="Image placeholder for Image Integration Experiment"></div>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <strong>The Great 404 Battle</strong><br>
-        <span class="status complete">Complete</span>
-      </td>
-      <td>
-        Deployed the first version of the site and fought configuration dragons until GitHub Pages finally stopped serving a 404.
-      </td>
-      <td>
-        <div class="img-placeholder" aria-label="Image placeholder for The Great 404 Battle"></div>
-      </td>
-    </tr>
-  </tbody>
-
-  <tfoot>
-    <tr>
-      <td colspan="3">
-        More projects coming soon — the waffle remains vigilant.
-      </td>
-    </tr>
-  </tfoot>
-</table>
 
       <p class="shenanigans-intro">
         The most recent shenanigan appears first. Older entries can be expanded if curiosity strikes.
@@ -141,10 +150,7 @@
           <p>
             This shenanigan focused on improving how experiments are presented rather than adding new technical functionality. As the list of shenanigans
             grew, the section began to feel heavier and less inviting to scan. Instead of introducing JavaScript, the experiment explored what could be accomplished
-            using native HTML and CSS alone, specifically leveraging semantic elements to create expandable, readable entries. By restructuring each shenanigan into
-            a collapsible format, the page became easier to navigate without sacrificing detail. Recent work remains visible at a glance, while older experiments
-            stay accessible without overwhelming the page. The result is a layout that scales naturally as more experiments are added and reinforces the idea that
-            thoughtful structure can often replace additional complexity.
+            using native HTML and CSS alone, specifically leveraging semantic elements to create expandable, readable entries.
           </p>
 
           <p class="lesson">
@@ -161,16 +167,12 @@
 
         <div class="shenanigan-content">
           <p>
-            This shenanigan focused on restructuring how experiments are presented rather than introducing a new technical feature. What began as a growing
-            list of chronological entries evolved into a more intentional format designed for readability and long-term growth. By grouping each experiment
-            into a consistent “card” structure with clear titles, status indicators, and explicit lessons learned, the Shenanigans section became easier to
-            scan and more inviting to explore. The process reinforced the idea that presentation is part of the experiment itself. Organizing content
-            thoughtfully not only improves usability for readers but also clarifies thinking for the person doing the work. The Vigilant Waffle didn’t just
-            document shenanigans this time—it reorganized them.
+            This shenanigan focused on restructuring how experiments are presented rather than introducing a new technical feature. What began as a growing list
+            of entries evolved into a more intentional format designed for readability and long-term growth.
           </p>
 
           <p class="lesson">
-            💡 <strong>What I learned:</strong> How information is structured matters as much as the information itself, and a little organization can dramatically improve clarity and usefulness.
+            💡 <strong>What I learned:</strong> How information is structured matters as much as the information itself.
           </p>
         </div>
       </details>
@@ -183,13 +185,7 @@
 
         <div class="shenanigan-content">
           <p>
-            This shenanigan began with a simple realization: the Vigilant Waffle was watching over images that were far larger than they needed to be.
-            While the page worked, it took longer than expected to load, especially on slower connections—an early warning sign that performance, not
-            just appearance, matters on the web. The experiment focused on resizing images to their actual display dimensions, compressing them to reduce
-            file size, and introducing modern browser features like lazy loading. By switching to more efficient formats and telling the browser when
-            images actually needed to load, the site became faster and more responsive without changing its visual design. The result was a noticeably
-            snappier page and an important lesson: optimization isn’t about cutting corners—it’s about intentional restraint. The waffle remains vigilant,
-            but now travels much lighter.
+            This shenanigan focused on resizing and compressing images to improve load speed and overall performance while keeping the design intact.
           </p>
 
           <p class="lesson">
@@ -206,10 +202,7 @@
 
         <div class="shenanigan-content">
           <p>
-            After adding CSS and celebrating a more polished layout, this experiment revealed that a design that looks great on desktop doesn’t automatically
-            translate well to mobile screens. Navigation buttons felt clunky, spacing became inconsistent, and the page demanded a second pass with responsiveness
-            in mind. By introducing media queries and refining the navigation into a cleaner, pill-style layout, the site became more usable across devices—
-            reinforcing that modern web design requires testing beyond a single screen size.
+            A desktop-friendly layout doesn’t automatically work on mobile. This experiment focused on testing and adjusting spacing and navigation for smaller screens.
           </p>
 
           <p class="lesson">
@@ -226,15 +219,11 @@
 
         <div class="shenanigan-content">
           <p>
-            This experiment marked the moment styling was officially allowed and the site transitioned from pure HTML into a more polished layout using CSS.
-            Initial attempts ran into issues linking the stylesheet correctly, highlighting the importance of file paths and proper <strong>&lt;link&gt;</strong>
-            placement in the HTML head. Once connected, the CSS immediately transformed the page layout, making previously useful <strong>&lt;hr&gt;</strong> separators
-            feel visually cluttered and unnecessary. Removing them reinforced how structure and presentation evolve together and demonstrated how good styling can
-            simplify, rather than complicate, the underlying HTML.
+            This experiment marked the point where CSS entered the project and instantly changed how the site looked and felt.
           </p>
 
           <p class="lesson">
-            💡 <strong>What I learned:</strong> Once CSS enters the picture, structure and presentation evolve together—what was once necessary markup can quickly become unnecessary noise.
+            💡 <strong>What I learned:</strong> Once CSS enters the picture, structure and presentation evolve together.
           </p>
         </div>
       </details>
@@ -247,15 +236,11 @@
 
         <div class="shenanigan-content">
           <p>
-            This experiment involved adding an image to a static HTML page hosted on GitHub Pages and turned out to be far more adventurous
-            than expected. Along the way, issues like folder structure confusion, case-sensitive file paths, GitHub’s ever-changing
-            interface, caching delays, and the difference between renaming a file versus properly converting an image format all made
-            appearances. After a series of troubleshooting steps and several “this should work” moments, the image finally displayed
-            correctly—proving that even simple tasks can offer valuable lessons when working with web hosting and version control.
+            Added an image to a GitHub Pages site and learned about folder structure, case-sensitive paths, caching delays, and file formats.
           </p>
 
           <p class="lesson">
-            💡 <strong>What I learned:</strong> On the web, small details matter—file paths, naming, formats, and caching can all derail simple tasks, and patience is often as important as technical skill.
+            💡 <strong>What I learned:</strong> Small details like file names and paths can derail simple tasks.
           </p>
         </div>
       </details>
@@ -268,23 +253,18 @@
 
         <div class="shenanigan-content">
           <p>
-            This experiment focused on deploying a simple HTML site using GitHub Pages and quickly turned into a lesson in patience and
-            attention to detail. Initial attempts were met with persistent 404 errors caused by publishing settings, branch and folder
-            selection, and the placement of the <strong>index.html</strong> file. After verifying repository structure, adjusting Pages
-            configuration, and waiting through deployment delays, the site finally went live—demonstrating how small configuration details
-            can have outsized effects when working with static site hosting.
+            This experiment focused on deploying the site to GitHub Pages and troubleshooting 404 errors caused by publishing configuration and file placement.
           </p>
 
           <p class="lesson">
-            💡 <strong>What I learned:</strong> With static hosting, configuration details matter as much as code—small setup choices can be the difference between a working site and a stubborn 404.
+            💡 <strong>What I learned:</strong> Hosting configuration details matter as much as the code itself.
           </p>
         </div>
       </details>
 
       <a href="#top">⬆ Back to top</a>
     </section>
-
-    <!-- Contact -->
+    
     <section id="contact" class="summon">
       <h2>Summon the Waffle</h2>
 
@@ -300,6 +280,7 @@
 
       <a href="#top">⬆ Back to top</a>
     </section>
+
   </main>
 
   <footer>
