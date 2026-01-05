@@ -235,3 +235,76 @@ footer {
   background-color: #2c3e50;
   color: #ffffff;
 }
+
+/* Nav hover transition (you already have it, this just guarantees it exists) */
+nav ul li a {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Main content section interactivity: smooth zoom on hover */
+section {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   Projects Table Styling
+   =============================== */
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.projects-table caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.projects-table th,
+.projects-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: top;
+}
+
+.projects-table thead th {
+  background-color: #34495e;
+  color: #fff;
+  text-align: left;
+}
+
+.projects-table tfoot td {
+  background-color: #f2f2f2;
+  font-style: italic;
+}
+
+/* Color first and third columns via colgroup/col */
+.projects-table col.col-1,
+.projects-table col.col-3 {
+  background-color: #f7fbff;
+}
+
+/* Image placeholder block */
+.img-placeholder {
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 10px,
+    #ededed 10px,
+    #ededed 20px
+  );
+}
