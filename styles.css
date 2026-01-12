@@ -251,9 +251,7 @@ section:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
-/* ===============================
-   Projects Table Styling
-   =============================== */
+/* Projects Table Styling */
 
 .projects-table {
   width: 100%;
@@ -377,9 +375,8 @@ nav ul {
 }
 
 /* ---------- Responsive Design: phone / tablet / desktop ---------- */
-/* Base styles = phone first */
 
-@media (min-width: 600px) { /* tablet and up */
+@media (min-width: 600px) { 
   .main-content {
     padding: 30px;
   }
@@ -389,7 +386,7 @@ nav ul {
   }
 }
 
-@media (min-width: 1024px) { /* desktop and up */
+@media (min-width: 1024px) { 
   .main-content {
     padding: 40px;
   }
@@ -399,3 +396,31 @@ nav ul {
   }
 }
 
+/* ---------- Summon Image Button ---------- */
+.summon-image-link {
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;          
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summon-image-link img {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.summon-image-link:hover,
+.summon-image-link:focus-visible {
+  transform: scale(1.04);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.summon-hint {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
