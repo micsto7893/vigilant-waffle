@@ -9,26 +9,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index HTML Page ver.2 Project 4.8</title>
 
-  <!-- Reuse your site styling -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
-    <h1>Contact</h1>
+    <h1>The Summoning Chamber</h1>
 
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Return to the Waffle</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="main-content">
-    <section class="contact-card">
-      <h2>Send a Message</h2>
+    <section class="contact-card waffle-card">
+      <h2>Leave a Message for the Vigilant Waffle</h2>
 
+      <p class="section-intro">
+        Please complete the ritual below. Polite messages are welcomed. Chaotic messages will be observed carefully.
+        *Results may vary.
+      </p>
+
+      <!-- Required form tag/attributes -->
       <form id="myForm" action="mailto:micsto7893@students.ecpi.edu" method="POST" enctype="text/plain">
         <div class="form-row">
           <label for="senderName">Your Name</label>
@@ -51,10 +56,14 @@
         </div>
 
         <div class="form-actions">
-          <input type="submit" value="Submit">
-          <button type="button" onclick="history.back()">Back</button>
+          <input type="submit" value="Begin the Summoning Ritual">
+          <button type="button" class="back-btn" onclick="history.back()">Back</button>
         </div>
       </form>
+
+      <p class="small-print">
+        If your email client opens and looks confused, that’s normal. The waffle is old magic.
+      </p>
     </section>
   </main>
 
