@@ -241,7 +241,8 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Main content section interactivity: smooth zoom on hover */
+/* Main content section interactivity: smooth zoom on hover ***REMOVED ON PURPOSE BECAUSE I DIDN'T LIKE THE LOOK***  */
+/*
 section {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -250,6 +251,7 @@ section:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
+*/
 
 /* Projects Table Styling */
 
