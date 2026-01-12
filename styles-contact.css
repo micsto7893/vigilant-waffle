@@ -145,3 +145,77 @@
   }
 
   .contact-page .summoning-image {
+
+
+.contact-page {
+  overflow-x: hidden; /* prevent tiny overflow from causing side-scroll */
+}
+
+.contact-page * {
+  box-sizing: border-box; /* iOS needs this everywhere sometimes */
+}
+
+.contact-page section {
+  margin: 0;
+  padding: 16px;
+}
+
+/* Give the card its own spacing instead (mobile-friendly) */
+.contact-page .contact-card {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tighten header + nav for small screens */
+@media (max-width: 480px) {
+  .contact-page header {
+    padding: 14px;
+  }
+
+  .contact-page header h1 {
+    font-size: 1.8rem; /* override styles.css 2.5rem */
+  }
+
+  .contact-page nav ul {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .contact-page nav ul li {
+    margin: 0; /* override styles.css li margin */
+  }
+
+  .contact-page nav ul li a {
+    padding: 10px 12px;
+    border-radius: 999px;
+    white-space: normal; /* allow wrapping if needed */
+    text-align: center;
+  }
+
+  .contact-page .main-content {
+    padding: 12px;
+  }
+
+  .contact-page .summoning-image {
+    max-width: 240px;
+    width: 100%;
+  }
+
+  /* Form controls: full width + no overflow */
+  .contact-page .form-row input,
+  .contact-page .form-row textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Submit button: full-width tap target */
+  .contact-page .form-actions {
+    flex-direction: column;
+  }
+
+  .contact-page .form-actions input[type="submit"] {
+    width: 100%;
+  }
+}
+
