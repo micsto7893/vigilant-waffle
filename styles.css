@@ -424,3 +424,67 @@ nav ul {
   color: #666;
   margin-top: 10px;
 }
+
+/* ---------- Contact Page Waffle Upgrades ---------- */
+.waffle-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.waffle-card::before {
+  content: "🧇";
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  font-size: 64px;
+  opacity: 0.12;
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+
+.section-intro {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+
+.form-row input,
+.form-row textarea {
+  background-color: #fff;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid rgba(26, 188, 156, 0.35);
+  border-color: #1abc9c;
+}
+
+
+.form-actions input[type="submit"] {
+  background-color: #3498db; 
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-actions input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+
+.back-btn {
+  background-color: #34495e;
+  color: #fff;
+}
+
+
+.small-print {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
