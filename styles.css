@@ -485,6 +485,11 @@ nav ul {
   margin-top: 14px;
   text-align: center;
   font-size: 0.9rem;
+
+  
   color: #666;
 }
 
+.summoning-image {
+  filter: saturate(1.05) brightness(0.95) contrast(0.95);
+}
