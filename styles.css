@@ -32,6 +32,8 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* helps for smaller screens too */
+  gap: 8px;
   background-color: #34495e;
 }
 
@@ -55,8 +57,6 @@ nav ul li a:hover {
 /* Mobile nav cleanup */
 @media (max-width: 600px) {
   nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
     padding: 10px;
   }
 
@@ -205,12 +205,18 @@ a[href="#top"] {
   color: #fff;
 }
 
+/* Fix: ensure abandoned pill doesn't get visually overridden in summary */
+.shenanigan-summary .status.abandoned {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
 /* ---------- Summon Section ---------- */
 .summon {
   text-align: center;
 }
 
-/* Summon Button */
+/* (Optional) Old summon-button class retained in case you still use it anywhere */
 .summon-button {
   display: inline-block;
   padding: 10px 18px;
@@ -227,6 +233,35 @@ a[href="#top"] {
   transform: translateY(-1px);
 }
 
+/* Summon image as button */
+.summon-image-link {
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summon-image-link img {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.summon-image-link:hover,
+.summon-image-link:focus-visible {
+  transform: scale(1.04);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.summon-hint {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
 /* ---------- Footer ---------- */
 footer {
   text-align: center;
@@ -236,12 +271,7 @@ footer {
   color: #ffffff;
 }
 
-/* Nav hover transition (you already have it, this just guarantees it exists) */
-nav ul li a {
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Main content section interactivity: smooth zoom on hover ***REMOVED ON PURPOSE BECAUSE I DIDN'T LIKE THE LOOK***  */
+/* Main content section interactivity: smooth zoom on hover ***REMOVED ON PURPOSE BECAUSE I DIDN'T LIKE THE LOOK*** */
 /*
 section {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -253,8 +283,7 @@ section:hover {
 }
 */
 
-/* Projects Table Styling */
-
+/* ---------- Projects Table Styling ---------- */
 .projects-table {
   width: 100%;
   border-collapse: collapse;
@@ -309,27 +338,19 @@ section:hover {
   );
 }
 
-/* ---------- Flexbox: main content area ---------- */
+/* ---------- Contact Page Layout (Flexbox) ---------- */
 .main-content {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
-/* ---------- Flexbox: navigation menu (already flex, but safe) ---------- */
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-/* ---------- Flexbox: contact form ---------- */
 .contact-card {
   width: 100%;
   max-width: 700px;
 }
 
+/* Form layout */
 #myForm {
   display: flex;
   flex-direction: column;
@@ -349,8 +370,16 @@ nav ul {
   border: 1px solid #ccc;
   border-radius: 8px;
   font: inherit;
+  background-color: #fff;
 }
 
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid rgba(26, 188, 156, 0.35);
+  border-color: #1abc9c;
+}
+
+/* Form buttons */
 .form-actions {
   display: flex;
   gap: 10px;
@@ -366,68 +395,30 @@ nav ul {
   font-weight: bold;
 }
 
+/* Submit = “ritual” button (blue) */
 .form-actions input[type="submit"] {
-  background-color: #1abc9c;
-  color: #000;
+  background-color: #3498db;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.form-actions input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Back button */
 .form-actions button {
   background-color: #34495e;
   color: #fff;
 }
 
-/* ---------- Responsive Design: phone / tablet / desktop ---------- */
-
-@media (min-width: 600px) { 
-  .main-content {
-    padding: 30px;
-  }
-
-  .form-row {
-    max-width: 600px;
-  }
+.back-btn {
+  background-color: #34495e;
+  color: #fff;
 }
 
-@media (min-width: 1024px) { 
-  .main-content {
-    padding: 40px;
-  }
-
-  .contact-card {
-    max-width: 800px;
-  }
-}
-
-/* ---------- Summon Image Button ---------- */
-.summon-image-link {
-  display: inline-block;
-  border-radius: 16px;
-  overflow: hidden;          
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.summon-image-link img {
-  display: block;
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-}
-
-.summon-image-link:hover,
-.summon-image-link:focus-visible {
-  transform: scale(1.04);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-  outline: none;
-}
-
-.summon-hint {
-  text-align: center;
-  font-style: italic;
-  color: #666;
-  margin-top: 10px;
-}
-
-/* ---------- Contact Page Waffle Upgrades ---------- */
+/* Contact page waffle upgrades */
 .waffle-card {
   position: relative;
   overflow: hidden;
@@ -452,50 +443,14 @@ nav ul {
   margin-bottom: 16px;
 }
 
-
-.form-row input,
-.form-row textarea {
-  background-color: #fff;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: 2px solid rgba(26, 188, 156, 0.35);
-  border-color: #1abc9c;
-}
-
-
-.form-actions input[type="submit"] {
-  background-color: #3498db; 
-  color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-actions input[type="submit"]:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
-}
-
-
-.back-btn {
-  background-color: #34495e;
-  color: #fff;
-}
-
-
 .small-print {
   margin-top: 14px;
   text-align: center;
   font-size: 0.9rem;
-
-  
   color: #666;
 }
 
-.summoning-image {
-  filter: saturate(1.05) brightness(0.95) contrast(0.95);
-}
-
+/* Summoning chamber image (foreground, if used) */
 .summoning-image {
   display: block;
   max-width: 420px;
@@ -503,7 +458,7 @@ nav ul {
   margin: 0 auto 16px;
   border-radius: 16px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-  filter: saturate(1.05) brightness(0.95);
+  filter: saturate(1.05) brightness(0.95) contrast(0.95);
   transition: transform 0.2s ease;
 }
 
@@ -511,3 +466,23 @@ nav ul {
   transform: scale(1.02);
 }
 
+/* ---------- Responsive Design: phone / tablet / desktop ---------- */
+@media (min-width: 600px) {
+  .main-content {
+    padding: 30px;
+  }
+
+  .form-row {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 40px;
+  }
+
+  .contact-card {
+    max-width: 800px;
+  }
+}
