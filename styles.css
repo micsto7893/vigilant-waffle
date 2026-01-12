@@ -511,27 +511,3 @@ nav ul {
   transform: scale(1.02);
 }
 
-/* ---------- Summoning Chamber Background (contact page only) ---------- */
-.contact-page .contact-card {
-  background-image: url("images/summoning-chamber.webp");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  position: relative;
-}
-
-/* Dark overlay for readability */
-.contact-page .contact-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.78);
-  pointer-events: none;
-}
-
-/* Ensure content appears above overlay */
-.contact-page .contact-card > * {
-  position: relative;
-  z-index: 1;
-}
-
