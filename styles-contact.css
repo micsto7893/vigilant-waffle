@@ -1,72 +1,34 @@
-/* Flexbox layout confirmation */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-page,
+.contact-page * {
+  box-sizing: border-box;
 }
 
-.contact-card {
+.contact-page {
+  overflow-x: hidden;
+}
+
+.contact-page section.contact-card {
+  margin: 0;
+  padding: 16px;
+}
+
+/* Layout */
+.contact-page .main-content {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.contact-page .contact-card {
+  width: 100%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin: 0 auto;
 }
 
-/* Form layout */
-#myForm {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* Input + textarea transitions */
-.form-row input,
-.form-row textarea {
-  transition: border-color 0.3s ease;
-}
-
-/* Focus + hover effects for inputs */
-.form-row input:hover,
-.form-row textarea:hover {
-  border-color: #9b59b6;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  border-color: #1abc9c;
-}
-
-/* Submit button transitions */
-.form-actions input[type="submit"] {
-  transition: background-color 0.3s ease;
-}
-
-/* Submit button hover + focus */
-.form-actions input[type="submit"]:hover,
-.form-actions input[type="submit"]:focus-visible {
-  background-color: #2c80b4;
-}
-
-/* Flexbox for form actions */
-.form-actions {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* Disable hover zoom for therapist waffle on contact page */
-.contact-page .summoning-image:hover,
-.contact-page .summoning-image:focus-visible {
-  transform: none;
-}
-
-/* Make sure the contact page doesn't feel like it's wearing a winter coat on a phone */
+/* Header tighter on contact page */
 .contact-page header {
   padding: 14px;
 }
@@ -76,7 +38,7 @@
   margin: 0;
 }
 
-/* Navigation: wrap nicely + pill-ish spacing */
+/* Nav: wrap + pills */
 .contact-page nav ul {
   padding: 10px;
   gap: 8px;
@@ -85,137 +47,108 @@
 }
 
 .contact-page nav ul li {
-  margin: 0; /* override the 0 15px desktop spacing from styles.css */
+  margin: 0; /* overrides styles.css nav ul li margin */
 }
 
 .contact-page nav ul li a {
   border-radius: 999px;
   white-space: nowrap;
   padding: 10px 12px;
+  text-align: center;
 }
 
-/* Main content: remove excess side padding on small screens */
-.contact-page .main-content {
-  padding: 12px;
-}
-
-/* Card spacing: keep it readable without squeezing */
-.contact-page .contact-card {
-  width: 100%;
-  max-width: 700px;
-}
-
-/* Image: don’t dominate the screen on phones */
 .contact-page .summoning-image {
   max-width: 280px;
   width: 100%;
   margin: 0 auto 12px;
 }
 
-/* Form elements: full width, comfy taps */
+.contact-page .summoning-image:hover,
+.contact-page .summoning-image:focus-visible {
+  transform: none;
+}
+
+/* Form layout */
 .contact-page #myForm {
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-page .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .contact-page .form-row input,
 .contact-page .form-row textarea {
   width: 100%;
-  box-sizing: border-box;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
 }
 
-/* Buttons: stack on mobile + full width for easy tapping */
+/* Interactivity */
+.contact-page .form-row input:hover,
+.contact-page .form-row textarea:hover {
+  border-color: #9b59b6;
+}
+
+.contact-page .form-row input:focus,
+.contact-page .form-row textarea:focus {
+  border-color: #1abc9c;
+}
+
+/* Form actions */
 .contact-page .form-actions {
-  flex-direction: column;
+  display: flex;
+  flex-direction: column; 
   gap: 10px;
 }
 
 .contact-page .form-actions input[type="submit"] {
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
-/* Slightly tighter text spacing on phones */
+.contact-page .form-actions input[type="submit"]:hover,
+.contact-page .form-actions input[type="submit"]:focus-visible {
+  background-color: #2c80b4;
+}
+
+/* Minor spacing */
 .contact-page .section-intro {
   margin-bottom: 12px;
 }
 
-/* Extra-small phones (optional but helpful) */
+/* Extra small phones */
 @media (max-width: 380px) {
   .contact-page header h1 {
     font-size: 1.75rem;
   }
 
   .contact-page .summoning-image {
-
-
-.contact-page {
-  overflow-x: hidden; /* prevent tiny overflow from causing side-scroll */
-}
-
-.contact-page * {
-  box-sizing: border-box; /* iOS needs this everywhere sometimes */
-}
-
-.contact-page section {
-  margin: 0;
-  padding: 16px;
-}
-
-/* Give the card its own spacing instead (mobile-friendly) */
-.contact-page .contact-card {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Tighten header + nav for small screens */
-@media (max-width: 480px) {
-  .contact-page header {
-    padding: 14px;
-  }
-
-  .contact-page header h1 {
-    font-size: 1.8rem; /* override styles.css 2.5rem */
-  }
-
-  .contact-page nav ul {
-    padding: 10px;
-    gap: 8px;
-  }
-
-  .contact-page nav ul li {
-    margin: 0; /* override styles.css li margin */
-  }
-
-  .contact-page nav ul li a {
-    padding: 10px 12px;
-    border-radius: 999px;
-    white-space: normal; /* allow wrapping if needed */
-    text-align: center;
-  }
-
-  .contact-page .main-content {
-    padding: 12px;
-  }
-
-  .contact-page .summoning-image {
     max-width: 240px;
-    width: 100%;
+  }
+}
+
+/* Tablet+ */
+@media (min-width: 600px) {
+  .contact-page .main-content {
+    padding: 20px;
   }
 
-  /* Form controls: full width + no overflow */
-  .contact-page .form-row input,
-  .contact-page .form-row textarea {
-    width: 100%;
-    max-width: 100%;
+  .contact-page section.contact-card {
+    padding: 20px;
   }
 
-  /* Submit button: full-width tap target */
+  /* Buttons can sit side-by-side when there's room */
   .contact-page .form-actions {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .contact-page .form-actions input[type="submit"] {
-    width: 100%;
+    width: auto;
   }
 }
-
