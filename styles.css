@@ -308,3 +308,94 @@ section:hover {
     #ededed 20px
   );
 }
+
+/* ---------- Flexbox: main content area ---------- */
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ---------- Flexbox: navigation menu (already flex, but safe) ---------- */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Flexbox: contact form ---------- */
+.contact-card {
+  width: 100%;
+  max-width: 700px;
+}
+
+#myForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-actions input[type="submit"],
+.form-actions button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-actions input[type="submit"] {
+  background-color: #1abc9c;
+  color: #000;
+}
+
+.form-actions button {
+  background-color: #34495e;
+  color: #fff;
+}
+
+/* ---------- Responsive Design: phone / tablet / desktop ---------- */
+/* Base styles = phone first */
+
+@media (min-width: 600px) { /* tablet and up */
+  .main-content {
+    padding: 30px;
+  }
+
+  .form-row {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) { /* desktop and up */
+  .main-content {
+    padding: 40px;
+  }
+
+  .contact-card {
+    max-width: 800px;
+  }
+}
+
