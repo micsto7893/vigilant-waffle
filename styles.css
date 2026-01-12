@@ -483,6 +483,12 @@ section:hover {
   }
 
   .contact-card {
+
+/* Disable image hover zoom on contact page only */
+.contact-page .summoning-image:hover {
+  transform: none;
+}
+
     max-width: 800px;
   }
 }
