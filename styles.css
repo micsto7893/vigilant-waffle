@@ -511,36 +511,27 @@ nav ul {
   transform: scale(1.02);
 }
 
-/* ---------- Contact Page Background Summoning Mood ---------- */
-#contact {
+/* ---------- Summoning Chamber Background (contact page only) ---------- */
+.contact-page .contact-card {
   background-image: url("images/summoning-chamber.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
 }
 
-/* dark overlay so text stays readable */
-#contact::before {
+/* Dark overlay for readability */
+.contact-page .contact-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.45);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   pointer-events: none;
 }
 
-/* make sure content sits above overlay */
-#contact > * {
+/* Ensure content appears above overlay */
+.contact-page .contact-card > * {
   position: relative;
   z-index: 1;
 }
 
-/* subtle padding bump so form isn’t jammed */
-#contact {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
