@@ -59,3 +59,10 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+
+/* Disable hover zoom for therapist waffle on contact page */
+.contact-page .summoning-image:hover,
+.contact-page .summoning-image:focus-visible {
+  transform: none;
+}
+
