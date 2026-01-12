@@ -66,3 +66,82 @@
   transform: none;
 }
 
+/* Make sure the contact page doesn't feel like it's wearing a winter coat on a phone */
+.contact-page header {
+  padding: 14px;
+}
+
+.contact-page header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Navigation: wrap nicely + pill-ish spacing */
+.contact-page nav ul {
+  padding: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-page nav ul li {
+  margin: 0; /* override the 0 15px desktop spacing from styles.css */
+}
+
+.contact-page nav ul li a {
+  border-radius: 999px;
+  white-space: nowrap;
+  padding: 10px 12px;
+}
+
+/* Main content: remove excess side padding on small screens */
+.contact-page .main-content {
+  padding: 12px;
+}
+
+/* Card spacing: keep it readable without squeezing */
+.contact-page .contact-card {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Image: don’t dominate the screen on phones */
+.contact-page .summoning-image {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto 12px;
+}
+
+/* Form elements: full width, comfy taps */
+.contact-page #myForm {
+  gap: 12px;
+}
+
+.contact-page .form-row input,
+.contact-page .form-row textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buttons: stack on mobile + full width for easy tapping */
+.contact-page .form-actions {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-page .form-actions input[type="submit"] {
+  width: 100%;
+}
+
+/* Slightly tighter text spacing on phones */
+.contact-page .section-intro {
+  margin-bottom: 12px;
+}
+
+/* Extra-small phones (optional but helpful) */
+@media (max-width: 380px) {
+  .contact-page header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-page .summoning-image {
