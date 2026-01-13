@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Metadata -->
+
   <meta charset="UTF-8">
   <meta name="description" content="A second HTML page called from index.html that accepts contact information.">
   <meta name="keywords" content="HTML, contacts page">
@@ -41,7 +41,7 @@
         Let’s talk about what’s really going on.
       </p>
 
-      <form id="myForm" action="mailto:micsto7893@students.ecpi.edu" method="POST" enctype="text/plain">
+      <form id="myForm" action="#" method="POST">
         <div class="form-row">
           <label for="senderName">Your Name</label>
           <input
@@ -76,19 +76,18 @@
 
         <div class="form-row">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5">
-I thought clicking “Summon the Waffle” would solve something.
+          <textarea id="message" name="message" rows="5">I thought clicking “Summon the Waffle” would solve something.
 It did not.
 
 Now I’m here, sitting on this couch, realizing the waffle was
 never meant to be summoned — only consulted.
 
-Please advise.
-          </textarea>
+Please advise.</textarea>
         </div>
 
         <div class="form-actions">
           <input type="submit" value="Start the Session">
+          <a href="index.html" class="back-btn">Return to the Waffle</a>
         </div>
       </form>
     </section>
