@@ -6,7 +6,7 @@ Live site:
 https://micsto7893.github.io/vigilant-waffle/
 
 Built with:
-- HTML/CSS
+- HTML/CSS and a touch of JS
 - Curiosity
 - Questionable confidence
 
