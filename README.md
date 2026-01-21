@@ -10,4 +10,6 @@ Built with:
 - Curiosity
 - Questionable confidence
 
+This is just a college class project that ends 1/21/26, enjoy it for what it is. No further updates are being made to it.
+
 \*Results may vary.
