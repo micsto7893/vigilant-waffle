@@ -226,3 +226,18 @@ textarea:focus {
     font-size: 2.4rem;
   }
 }
+
+/* --- Force recipe cards side-by-side on larger screens --- */
+@media (min-width: 768px) {
+  .articles {
+    display: flex;
+    flex-direction: row !important;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .articles .card {
+    flex: 1 1 0;
+  }
+}
+
